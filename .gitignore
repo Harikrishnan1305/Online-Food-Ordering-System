@@ -1,0 +1,27 @@
+# === Maven Build ===
+target/
+*.class
+*.jar
+*.war
+
+# === IDE Files ===
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# === Logs ===
+*.log
+
+# === Antigravity ===
+.antigravityignore
