@@ -77,7 +77,7 @@ Online Food Ordering System using Java/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Online-Food-Ordering-System.git
+git clone https://github.com/Harikrishnan1305/Online-Food-Ordering-System.git
 cd Online-Food-Ordering-System
 ```
 
@@ -114,6 +114,14 @@ Open your browser and navigate to:
 ```
 http://localhost:8080/FoodOrderingSystem/
 ```
+
+---
+
+## 📚 Technical Documentation
+
+For detailed technical documentation including system architecture, database design, API endpoints, security implementation, and deployment guide, see:
+
+📄 **[TECHNICAL_DOCUMENTATION.md](TECHNICAL_DOCUMENTATION.md)**
 
 ---
 
