@@ -12,12 +12,24 @@ public class DBConnection {
 
     private static final String URL = "jdbc:mysql://localhost:3306/food_ordering_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "YOUR_MYSQL_PASSWORD";
+    private static String PASSWORD = "YOUR_MYSQL_PASSWORD";
 
-    // Load MySQL JDBC Driver once
+    // Load MySQL JDBC Driver and Properties
     static {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Load password from db.properties securely
+            try (java.io.InputStream input = DBConnection.class.getClassLoader().getResourceAsStream("db.properties")) {
+                if (input != null) {
+                    java.util.Properties prop = new java.util.Properties();
+                    prop.load(input);
+                    PASSWORD = prop.getProperty("db.password", PASSWORD);
+                }
+            } catch (Exception ex) {
+                System.err.println("Warning: Could not read db.properties");
+            }
+            
         } catch (ClassNotFoundException e) {
             System.err.println("MySQL JDBC Driver not found!");
             e.printStackTrace();

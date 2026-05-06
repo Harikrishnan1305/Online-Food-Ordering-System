@@ -25,3 +25,6 @@ desktop.ini
 
 # === Antigravity ===
 .antigravityignore
+
+# === Confidential Data ===
+db.properties

@@ -67,6 +67,25 @@
                     <target>11</target>
                 </configuration>
             </plugin>
+            <!-- Added Cargo Plugin to easily run Tomcat 9 -->
+            <plugin>
+                <groupId>org.codehaus.cargo</groupId>
+                <artifactId>cargo-maven3-plugin</artifactId>
+                <version>1.10.10</version>
+                <configuration>
+                    <container>
+                        <containerId>tomcat9x</containerId>
+                        <zipUrlInstaller>
+                            <url>https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.83/bin/apache-tomcat-9.0.83.zip</url>
+                        </zipUrlInstaller>
+                    </container>
+                    <configuration>
+                        <properties>
+                            <cargo.servlet.port>8080</cargo.servlet.port>
+                        </properties>
+                    </configuration>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
